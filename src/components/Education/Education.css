@@ -1,0 +1,316 @@
+.education-container {
+  padding: 120px 0 80px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Education Section */
+.education-section {
+  margin-bottom: 60px;
+}
+
+.education-cards {
+  margin-top: 50px;
+}
+
+.education-card {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.education-card-header {
+  margin-bottom: 20px;
+}
+
+.institution-name {
+  margin-bottom: 10px !important;
+  color: var(--secondary-color) !important;
+  font-weight: 600 !important;
+}
+
+.degree-badge {
+  display: inline-block;
+  background-color: rgba(108, 99, 255, 0.1);
+  color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.education-period {
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.period-icon {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.education-description {
+  color: var(--light-text-color) !important;
+  margin-bottom: 20px !important;
+  line-height: 1.7 !important;
+}
+
+.courses-section {
+  margin-top: 20px;
+}
+
+.courses-title {
+  color: var(--secondary-color) !important;
+  margin-bottom: 15px !important;
+  font-weight: 600 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.courses-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.course-tag {
+  background-color: var(--light-background) !important;
+  color: var(--light-text-color) !important;
+  border-color: transparent !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  margin-right: 0 !important;
+}
+
+.section-divider {
+  margin: 60px 0 !important;
+  border-top: 1px solid #f0f0f0 !important;
+}
+
+/* Certifications Section */
+.certifications-section {
+  margin-bottom: 60px;
+}
+
+.certifications-card {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.certifications-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.card-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.card-title {
+  margin-bottom: 0 !important;
+  color: var(--secondary-color) !important;
+  font-weight: 600 !important;
+}
+
+.certifications-list {
+  margin-top: 20px;
+}
+
+.certification-item {
+  padding: 16px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.certification-item:last-child {
+  border-bottom: none !important;
+}
+
+.certification-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+}
+
+.certification-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.certification-content {
+  flex: 1;
+}
+
+.certification-title {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.certification-issuer, .certification-date {
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+}
+
+.course-item {
+  padding: 16px 0 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.course-item:last-child {
+  border-bottom: none !important;
+}
+
+.course-content {
+  width: 100%;
+}
+
+.course-title {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.course-details {
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.separator {
+  margin: 0 8px;
+}
+
+.course-completion {
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Education CTA Section */
+.education-cta-section {
+  padding: 60px 40px;
+  background-color: var(--light-background);
+  border-radius: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h3 {
+  color: var(--secondary-color) !important;
+  margin-bottom: 20px !important;
+  font-weight: 600 !important;
+}
+
+.cta-content p {
+  color: var(--light-text-color) !important;
+  margin-bottom: 30px !important;
+  font-size: 1.05rem !important;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-icon-item {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.skill-icon-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon-item img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .education-container {
+    padding: 100px 0 60px;
+  }
+  
+  .education-cards {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .education-container {
+    padding: 80px 0 40px;
+  }
+  
+  .certifications-card {
+    margin-bottom: 20px;
+  }
+  
+  .skills-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .skill-icon-item {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .skill-icon-item img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .education-cta-section {
+    padding: 40px 20px;
+  }
+} 

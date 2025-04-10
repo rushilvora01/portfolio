@@ -1,0 +1,483 @@
+.experience-container {
+  padding: 120px 0 80px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+/* Desktop Timeline Navigation */
+.timeline-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px auto 50px;
+  max-width: 900px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(108, 99, 255, 0.2);
+  z-index: 1;
+}
+
+.timeline-nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  padding: 0 10px;
+  width: 120px;
+}
+
+.timeline-node {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(108, 99, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.timeline-node-inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(108, 99, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timeline-content {
+  text-align: center;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.timeline-year {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-size: 0.75rem;
+  color: var(--light-text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.timeline-nav-item.active .timeline-node {
+  background-color: rgba(108, 99, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.timeline-nav-item.active .timeline-node-inner {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.timeline-nav-item.active .timeline-content {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.timeline-nav-item:hover .timeline-node {
+  transform: scale(1.1);
+}
+
+.timeline-nav-item:hover .timeline-content {
+  opacity: 1;
+}
+
+/* Active Experience Card */
+.active-experience-container {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.experience-card.active-card {
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.experience-card.active-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.company-info {
+  padding: 15px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.position-tag {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 30px;
+}
+
+.experience-meta {
+  margin-bottom: 30px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  color: var(--light-text-color);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.meta-icon {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.mobile-nav-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: auto;
+  gap: 15px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-counter {
+  font-size: 0.9rem;
+  color: var(--light-text-color);
+}
+
+/* Experience Details */
+.experience-details {
+  padding: 15px 0;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--light-text-color);
+  margin-bottom: 20px;
+}
+
+.responsibilities-divider {
+  margin: 20px 0;
+  background-color: rgba(108, 99, 255, 0.1);
+}
+
+.responsibilities-title {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibility-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--light-text-color);
+}
+
+.responsibility-icon {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 1rem;
+  margin-top: 3px;
+}
+
+/* Desktop Navigation Controls */
+.desktop-nav-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.desktop-nav-button {
+  min-width: 120px;
+}
+
+.desktop-nav-button.right {
+  flex-direction: row-reverse;
+}
+
+.desktop-nav-button.right .anticon {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+/* Experience Summary Section */
+.experience-summary-section {
+  padding: 60px 40px;
+  background-color: var(--light-background);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.summary-col {
+  padding: 20px;
+}
+
+.summary-content {
+  max-width: 500px;
+}
+
+.summary-title {
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.summary-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.summary-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--light-text-color);
+  margin-bottom: 20px;
+}
+
+.stats-container {
+  display: flex;
+  margin: 40px 0;
+  gap: 30px;
+}
+
+.stat-item {
+  text-align: center;
+  background-color: white;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--light-text-color);
+  font-size: 0.85rem;
+}
+
+.cta-button {
+  margin-top: 30px;
+}
+
+.experience-image-container {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.experience-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(44, 62, 80, 0.8), rgba(108, 99, 255, 0.4));
+}
+
+.floating-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+  z-index: 2;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .experience-container {
+    padding: 100px 0 60px;
+  }
+  
+  .desktop-timeline {
+    display: none;
+  }
+  
+  .active-experience-container {
+    padding: 0 15px;
+  }
+  
+  .desktop-nav-controls {
+    display: none;
+  }
+  
+  .mobile-nav-controls {
+    display: flex;
+  }
+  
+  .stats-container {
+    gap: 15px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .experience-image-container {
+    height: 350px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .mobile-nav-controls {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience-container {
+    padding: 80px 0 40px;
+  }
+  
+  .experience-card.active-card {
+    padding: 20px;
+  }
+  
+  .company-info {
+    margin-bottom: 20px;
+  }
+  
+  .experience-summary-section {
+    padding: 40px 20px;
+  }
+  
+  .summary-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .summary-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .stats-container {
+    justify-content: center;
+  }
+  
+  .cta-button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    padding: 15px;
+  }
+  
+  .experience-image-container {
+    height: 250px;
+  }
+  
+  .floating-badge {
+    top: 15px;
+    right: 15px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+} 

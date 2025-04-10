@@ -1,0 +1,268 @@
+.contact-container {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+
+.contact-section {
+  margin-bottom: 60px;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  margin-bottom: 16px !important;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.contact-content {
+  margin-top: 20px;
+}
+
+/* Contact Form Styles */
+.contact-card {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.card-title {
+  margin-bottom: 24px !important;
+  color: var(--text-primary);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-color);
+  bottom: 0;
+  left: 0;
+}
+
+.contact-form .form-input {
+  border-radius: 6px;
+  margin-bottom: 5px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-input:hover,
+.contact-form .form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  background: var(--primary-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(24, 144, 255, 0.3);
+}
+
+/* Contact Info Styles */
+.info-card {
+  margin-bottom: 30px;
+}
+
+.info-description {
+  margin-bottom: 30px;
+  color: var(--text-secondary);
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.info-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(24, 144, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.info-icon {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.info-value {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.info-value a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.info-value a:hover {
+  color: var(--primary-color);
+}
+
+/* Social Icons */
+.social-title {
+  margin-bottom: 16px !important;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 20px;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+  background-color: rgba(24, 144, 255, 0.1);
+}
+
+/* Map Styles */
+.map-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .contact-container {
+    padding: 80px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 60px 0;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+  
+  .contact-card {
+    margin-bottom: 30px;
+  }
+  
+  .info-item {
+    margin-bottom: 15px;
+  }
+  
+  .map-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .section-subtitle {
+    font-size: 14px;
+  }
+  
+  .info-icon-box {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .info-icon {
+    font-size: 16px;
+  }
+  
+  .info-label {
+    font-size: 13px;
+  }
+  
+  .info-value {
+    font-size: 14px;
+  }
+  
+  .social-icon {
+    font-size: 18px;
+    padding: 8px;
+  }
+} 
