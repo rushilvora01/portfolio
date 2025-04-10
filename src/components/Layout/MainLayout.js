@@ -56,7 +56,7 @@ const MainLayout = () => {
       <Affix>
         <Header className={`header ${scrolled ? 'scrolled' : ''}`}>
           <div className="logo">
-            <Link to="/">My Portfolio</Link>
+            <Link to="/">Portfolio</Link>
           </div>
           
           <div className="desktop-menu">
