@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Typography, Button, Row, Col } from 'antd';
+import { Typography, Button, Row, Col, message } from 'antd';
 import { DownloadOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -10,15 +10,43 @@ import './Home.css';
 const { Title, Paragraph } = Typography;
 
 const Home = () => {
+  const [messageApi, contextHolder] = message.useMessage()
   // Initialize scroll reveal effect
   useEffect(() => {
     const cleanup = initScrollReveal();
     return cleanup;
   }, []);
 
+  // Function to handle resume download
+  const handleResumeDownload = async () => {
+    try {
+      const response = await fetch(portfolioData?.about?.resumeDownloadUrl);
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = window?.URL?.createObjectURL(blob);
+      const a = document?.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      
+      // Extract filename from URL or use default
+      const filename = 'rushil-vora-resume.pdf';
+      a.download = filename;
+      
+      document?.body?.appendChild(a);
+      a.click();
+      window?.URL?.revokeObjectURL(url);
+      document?.body?.removeChild(a);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      messageApi.error('Failed to download resume. Please try again later.');
+    }
+  };
+
   return (
     <div className="home-container">
       {/* Hero Section */}
+      {contextHolder}
       <section className="hero-section">
         <div className="hero-content">
           <Row gutter={[24, 24]} align="middle">
@@ -42,8 +70,7 @@ const Home = () => {
                     type="primary" 
                     size="large" 
                     className="primary-button"
-                    href={portfolioData.about.resumeDownloadUrl}
-                    target="_blank"
+                    onClick={handleResumeDownload}
                     icon={<DownloadOutlined />}
                   >
                     Download Resume
