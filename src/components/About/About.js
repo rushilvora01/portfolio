@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Typography, Row, Col, Button, Timeline, Card } from 'antd';
+import { Typography, Row, Col, Button, Timeline, Card, message } from 'antd';
 import {
   DownloadOutlined,
   EnvironmentOutlined,
@@ -17,13 +17,42 @@ import './About.css';
 const { Title, Paragraph } = Typography;
 
 const About = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+  
   useEffect(() => {
     const cleanup = initScrollReveal();
     return cleanup;
   }, []);
 
+  // Function to handle resume download
+  const handleResumeDownload = async () => {
+    try {
+      const response = await fetch(portfolioData?.about?.resumeDownloadUrl);
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = window?.URL?.createObjectURL(blob);
+      const a = document?.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      
+      // Extract filename from URL or use default
+      const filename = 'rushil-vora-resume.pdf';
+      a.download = filename;
+      
+      document?.body?.appendChild(a);
+      a.click();
+      window?.URL?.revokeObjectURL(url);
+      document?.body?.removeChild(a);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      messageApi.error('Failed to download resume. Please try again later.');
+    }
+  };
+
   return (
     <div className="about-container">
+      {contextHolder}
       <div className="container">
         <section className="about-section">
           <div className="section-header text-center reveal">
@@ -131,8 +160,7 @@ const About = () => {
                   size="large"
                   icon={<DownloadOutlined />}
                   className="download-cv-btn"
-                  href={portfolioData.about.resumeDownloadUrl}
-                  target="_blank"
+                  onClick={handleResumeDownload}
                 >
                   Download Resume
                 </Button>
