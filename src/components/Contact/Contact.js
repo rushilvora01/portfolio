@@ -48,6 +48,7 @@ const Contact = () => {
     const templateParams = {
       ...values,
       to_email: 'rushil.vora01@gmail.com',
+      current_year: new Date().getFullYear()
     };
 
     emailjs
