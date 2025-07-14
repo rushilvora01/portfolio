@@ -16,6 +16,7 @@ import {
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ScrollToTop from '../../utils/ScrollToTop';
+import WhatsAppButton from '../WhatsAppButton/WhatsAppButton';
 import './MainLayout.css';
 
 const { Header, Content, Footer } = Layout;
@@ -130,6 +131,9 @@ const MainLayout = () => {
           </div>
         </div>
       </Footer>
+      
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </Layout>
   );
 };
